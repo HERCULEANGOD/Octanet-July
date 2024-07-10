@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn languages for free with Duolingo.">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <title>Duolingo - Learn Languages for Free</title>
+    <style>
+        *{
+            padding: 20px;
+            }
+        body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+}
+
+
+        header {
+            width: 100%;
+            padding: 05px 20px;
+            background: url('') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            color: #000000; 
+        }
+
+        .header-title {
+            font-size: 2rem; 
+            font-weight: 600;
+            margin-left: 20px; 
+        }
+
+        .logo {
+            height: 50px; 
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            padding: 0 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .hero {
+            width: 100%;
+            padding: 80px 10px;
+            background-color: #58cc02;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #58cc02;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .cta-button-:hover {
+            background-color: #f0f0f0;
+        }
+
+        .features {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            gap: 20px;
+            background-color: #f7f9fc;   
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .feature img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+        }
+
+        .subscription {
+    width: 100%;
+    padding: 80px 40px;
+    background-image: url('https://duoplanet.com/wp-content/uploads/2023/02/Is-Duolingo-free-1536x864.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.subscription-plan:nth-child(1) { 
+    background-image: url('https://i.pinimg.com/564x/e6/47/e3/e647e35bcf88c28b27f5ffdee044d6bc.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.subscription-plan:nth-child(2) { 
+    background-image: url('https://i.pinimg.com/236x/10/12/30/101230898d68d698e4661cbf5556e9a4.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.subscription-plan:nth-child(3) { 
+    background-image: url('https://i.pinimg.com/564x/58/bb/4b/58bb4be85ba849529fef73ac692eac85.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+        .subscription h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .subscription-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .subscription-plan {
+            background-color: #f7f9fc;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .subscription-plan h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subscription-plan p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .subscription-plan .price {
+            font-size: 2rem;
+            color: #58cc02;
+            margin-bottom: 20px;
+        }
+
+        .subscription-plan button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #58cc02;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .upgrade {
+            width: 100%;
+            padding: 80px 40px;
+            background-color: #58cc02;
+            color: #fff;
+            text-align: center;
+        }
+
+        .upgrade h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .upgrade p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-button-upgrade {
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #58cc02;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .cta-button-upgrade:hover {
+            background-color: #f0f0f0;
+        }
+
+        .features-premium {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 80px 40px;
+            gap: 20px;
+            background-color: #f7f9fc;
+        }
+
+        .feature-premium {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .feature-premium img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .feature-premium h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-premium p {
+            font-size: 1rem;
+        }
+
+        .language-selection {
+            width: 100%;
+            padding: 20px;
+            background-color: #58cc02;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .language-selection h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .flag-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .flag-button {
+            width: 50px;
+            height: 50px;
+            background-image: url('https://d35aaqx5ub95lt.cloudfront.net/vendor/87938207afff1598611ba626a8c4827c.svg');
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .flag-button:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Duolingo</h1>
+        <img class="logo" src="https://d35aaqx5ub95lt.cloudfront.net/images/splash/f92d5f2f7d56636846861c458c0d0b6c.svg" alt="Duolingo Logo">
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Learn Languages for Free</h1>
+        <p>Join millions of learners on Duolingo and start your language learning journey today.</p>
+        <button class="cta-button">Get Started</button>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <img src="https://blog.duolingo.com/content/images/2020/06/Sk8tr-Boi-EXPORT_03-1.gif" alt="Feature Image 1">
+            <h3>Effective and Fun</h3>
+            <p>Engaging lessons to keep you motivated and learning.</p>
+        </div>
+        <div class="feature">
+            <img src="https://miro.medium.com/v2/resize:fit:875/1*wwTQX7rrgfFWginLJLT0rQ.jpeg" alt="Feature Image 2">
+            <h3>Practice Speaking</h3>
+            <p>Improve your pronunciation with real-world conversations.</p>
+        </div>
+        <div class="feature">
+            <img src="https://duoplanet.com/wp-content/uploads/2022/09/Duolingo-levels-1-1536x864.png" alt="Feature Image 3">
+            <h3>Track Your Progress</h3>
+            <p>Stay motivated with progress tracking and goals. Understanding them is super important if you want to master Duolingo’s new approach to learning languages!.</p>
+        </div>
+    </section>
+    <section class="subscription">
+        <h2>Subscription Options</h2>
+        <div class="subscription-options">
+            <div class="subscription-plan">
+                <h3>Free</h3>
+                <p>Access to all lessons and features with ads.</p>
+                <div class="price">Free</div>
+                <button>Select Plan</button>
+            </div>
+            <div class="subscription-plan">
+                <h3>Duolingo Plus</h3>
+                <p>Ad-free experience with offline access.</p>
+                <div class="price">₹125/month</div>
+                <button>Select Plan</button>
+            </div>
+            <div class="subscription-plan">
+                <h3>Family Plan</h3>
+                <p>Share Duolingo Plus with up to 5 family members.</p>
+                <div class="price">₹500/month</div>
+                <button>Select Plan</button>
+            </div>
+        </div>
+    </section>
+    <section class="upgrade">
+        <h2>Super Duolingo - Upgrade Now!</h2>
+        <p>Unlock advanced features and an ad-free experience with Super Duolingo.</p>
+        <button class="cta-button-upgrade">Upgrade Now</button>
+    </section>
+    <section class="features-premium">
+        <div class="feature-premium">
+            <img src="https://d35aaqx5ub95lt.cloudfront.net/images/about/fa27866cfc75a55f3a545e14770c8585.svg" alt="Feature Image 1">
+            <h4>Priority Support</h4>
+            <p>Get priority support from our dedicated team for any assistance.</p>
+        </div>
+        <div class="feature-premium">
+            <img src="https://blog.duolingo.com/content/images/2022/05/ABC-reading-crew-4.png" alt="Feature Image 2">
+            <h4>Offline Access</h4>
+            <p>Download lessons and learn on the go, even without an internet connection.</p>
+        </div>
+        <div class="feature-premium">
+            <img src="https://blog.duolingo.com/content/images/2022/06/SM_DuoversaryInnovations_mobile-lesson.png" alt="Feature Image 3">
+            <h4>Progress Tracking</h4>
+            <p>Get detailed insights into your learning progress and achievements.</p>
+        </div>
+        <div class="feature-premium">
+            <img src="https://design.duolingo.com/ea189b5da4a9fb040dcd.svg" alt="Feature Image 4">
+            <h4>Unlimited Hearts</h4>
+            <p>Practice without limitations and enhance your learning efficiency.</p>
+        </div>
+        <div class="feature-premium">
+            <img src="https://blog.duolingo.com/content/images/2020/06/skilliconsbgsharp.gif" alt="Feature Image 5">
+            <h4>Ad-Free Learning</h4>
+            <p>Enjoy an uninterrupted learning experience without any ads.</p>
+        </div>
+    </section>
+    <section class="language-selection">
+        <h2>Select Your Language</h2>
+        <div class="flag-buttons">
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=ShNNs7i8tXQF&format=png');" title="English"></button>
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=ly7tzANRt33n&format=png');" title="Spanish"></button>
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=esGVrxg9VCJ1&format=png');" title="Hindi"></button>
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=McQbrq9qaQye&format=png');" title="Japanese"></button>
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=3muzEmi4dpD5&format=png');" title="French"></button>
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=WmOfu4e7Rvp7&format=png');" title="Italian"></button>
+            <button class="flag-button" style="background-image: url('https://img.icons8.com/?size=48&id=hTMPE6ntTofO&format=png');" title="German"></button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Duolingo. All rights reserved.</p>
+    </footer>
+    <script>
+        
+        const faqItems = document.querySelectorAll('.faq-item h3');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
